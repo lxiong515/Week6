@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="UserTripLists" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.ListItem</class>
+		<class>model.Traveler</class>
+		<class>model.ListDetails</class>
+		<class>controller.LocalDateAttributeConverter</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://database-1.cici0yk2aayr.us-east-1.rds.amazonaws.com/trips"/>
+			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.password" value="Birthday1!"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
