@@ -24,7 +24,7 @@ public class TravelerHelper { //no persistence provider for entitymanager named 
 	
 	public List<Traveler>showAllTravelers(){
 		EntityManager em = emfactory.createEntityManager();
-		List<Traveler> allTravelers = em.createNamedQuery("SELECT s FROM Traveler t").getResultList();
+		List<Traveler> allTravelers = em.createQuery("SELECT t FROM Traveler t").getResultList();
 		return allTravelers;
 	}
 
