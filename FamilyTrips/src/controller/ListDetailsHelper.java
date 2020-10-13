@@ -27,7 +27,7 @@ public class ListDetailsHelper {
 		//added two lines below to see if it helps wiht error - still same issue
 		//em.getTransaction().begin();
 		//em.getTransaction().commit();
-		List<ListDetails>allDetails = em.createNamedQuery("SELECT d FROM ListDetails d").getResultList();
+		List<ListDetails> allDetails = em.createQuery("SELECT d FROM ListDetails d").getResultList();
 		//em.getTransaction().commit();
 		return allDetails;
 	}
